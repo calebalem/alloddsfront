@@ -11,7 +11,7 @@
 	} from 'firebase/auth';
 	import { addDocument, app, auth } from '$lib/fire_base/firebase';
 	import { toast } from '@zerodevx/svelte-toast';
-	import { lastPage } from '$lib/stores/ketzner';
+	import { isLoggedOut, lastPage } from '$lib/stores/ketzner';
 	import moment from 'moment';
 
 
@@ -23,6 +23,7 @@
 	}, 2000);
 	onAuthStateChanged(auth, async (user) => {
 		if (user) {
+			isLoggedOut.set(false)
 			fetch('https://ketzner-sports.uc.r.appspot.com/getTime', { mode: 'cors' }).then((res) => {
 				res.json().then((data) => {
 					console.log('Saving User');
@@ -31,6 +32,8 @@
 				});
 			});
 			goto($lastPage);
+		}else{
+			isLoggedOut.set(true)
 		}
 	});
 	let email;
