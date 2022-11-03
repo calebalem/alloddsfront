@@ -1,0 +1,41 @@
+{
+	"name": "frontend",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"test": "playwright test",
+		"lint": "prettier --plugin-search-dir . --check .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@beyonk/svelte-social-auth": "^3.0.0",
+		"@playwright/test": "^1.25.0",
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/adapter-static": "^1.0.0-next.44",
+		"@sveltejs/kit": "next",
+		"prettier": "^2.6.2",
+		"prettier-plugin-svelte": "^2.7.0",
+		"sass": "^1.55.0",
+		"svelte": "^3.44.0",
+		"svelte-adapter-firebase": "^0.14.4",
+		"svelte-check": "^2.7.1",
+		"typescript": "^4.7.4",
+		"vite": "^3.1.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@popperjs/core": "^2.11.6",
+		"@zerodevx/svelte-toast": "^0.8.0",
+		"bootstrap": "^5.2.2",
+		"bootstrap-select": "^1.13.18",
+		"moment": "^2.29.4",
+		"svelte-body": "^1.3.6",
+		"svelte-remixicon": "^1.0.1",
+		"svelte-toasts": "^1.1.2"
+	}
+}

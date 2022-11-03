@@ -1,0 +1,1 @@
+export const sports = [{name:"NBA",link:"/Home/nba"},{name:"NFL",link:"/Home/nfl"}]
