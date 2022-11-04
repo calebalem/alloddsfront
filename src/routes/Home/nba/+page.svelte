@@ -115,7 +115,7 @@
 											class="btn btn-dark btn-sm"
 											href={site.link}
 											target="_blank"
-											rel="noreferrer">{site.name}</a
+											rel="noreferrer"><h6>{site.name}</h6></a
 										></td
 									>
 								{/each}
@@ -125,7 +125,7 @@
 							{#each $allSiteNbaData.games as game, i}
 								<tr>
 									<td>{i + 1}</td>
-									<td>{game.get('home_team')}</td>
+									<td><h6>{game.get('home_team')}</h6></td>
 									{#each $allSiteNbaData.sitesList as site}
 										{#if game.has(`${site.name}_home_moneyline`)}
 											{#if game.has(`${site.name}_home_color`)}
@@ -145,7 +145,7 @@
 
 								<tr class="mb-2">
 									<td />
-									<td>{game.get('visitor_team')}</td>
+									<td><h6>{game.get('visitor_team')}</h6></td>
 									{#each $allSiteNbaData.sitesList as site}
 										{#if game.has(`${site.name}_visitor_moneyline`)}
 											{#if game.has(`${site.name}_visitor_color`)}
@@ -226,7 +226,7 @@
 							{#each data.sitesList as site}
 								<td
 									><a class="btn btn-dark btn-sm" href={site.link} target="_blank" rel="noreferrer"
-										>{site.name}</a
+										><h6>{site.name}</h6></a
 									></td
 								>
 							{/each}
@@ -236,7 +236,7 @@
 						{#each data.games as game, i}
 							<tr>
 								<td>{i + 1}</td>
-								<td>{game.get('home_team')}</td>
+								<td><h6>{game.get('home_team')}</h6></td>
 								{#each data.sitesList as site}
 									{#if game.has(`${site.name}_home_moneyline`)}
 										{#if game.has(`${site.name}_home_color`)}
@@ -256,7 +256,7 @@
 
 							<tr class="mb-2">
 								<td />
-								<td>{game.get('visitor_team')}</td>
+								<td><h6>{game.get('visitor_team')}</h6></td>
 								{#each data.sitesList as site}
 									{#if game.has(`${site.name}_visitor_moneyline`)}
 										{#if game.has(`${site.name}_visitor_color`)}
