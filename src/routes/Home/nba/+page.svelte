@@ -76,7 +76,7 @@
 							on:click={changeResponsive}
 							checked
 						/>
-						<label class="form-check-label" for="flexCheckDefault"> Responsive </label>
+						<label class="form-check-label" for="flexCheckDefault"> Toogle View </label>
 					</div>
 				{:else}
 					<div class="form-check">
@@ -87,7 +87,7 @@
 							id="flexCheckDefault"
 							on:click={changeResponsive}
 						/>
-						<label class="form-check-label" for="flexCheckDefault"> Responsive </label>
+						<label class="form-check-label" for="flexCheckDefault"> Toogle View </label>
 					</div>
 				{/if}
 				<div class={responsiveToogle ? 'table-responsive-sm' : 'table'}>
@@ -105,7 +105,7 @@
                                     }}
                                 >
                                     {#each sports as sport}
-                                        <option class="btn-dark" value={sport.link}>{sport.name} </option>
+                                        <option class="btn-dark" value={sport.link}><h5>{sport.name}</h5> </option>
                                     {/each}
                                 </select></td
 								>
@@ -130,15 +130,15 @@
 										{#if game.has(`${site.name}_home_moneyline`)}
 											{#if game.has(`${site.name}_home_color`)}
 												<td class={`${game.get(`${site.name}_home_color`)} text-center`}
-													>{game.get(`${site.name}_home_moneyline`)}</td
+													><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_home_moneyline`)}</a></td
 												>
 											{:else}
 												<td class="table-light text-center"
-													>{game.get(`${site.name}_home_moneyline`)}</td
+													><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_home_moneyline`)}</a></td
 												>
 											{/if}
 										{:else}
-											<td class="table-secondary text-center">N/L</td>
+											<td class="table-secondary text-center"><a  class="btn " href={site.link} target="_blank" rel="noreferrer">N/L</a></td>
 										{/if}
 									{/each}
 								</tr>
@@ -150,15 +150,15 @@
 										{#if game.has(`${site.name}_visitor_moneyline`)}
 											{#if game.has(`${site.name}_visitor_color`)}
 												<td class={`${game.get(`${site.name}_visitor_color`)} text-center`}
-													>{game.get(`${site.name}_visitor_moneyline`)}</td
+													><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_visitor_moneyline`)}</a></td
 												>
 											{:else}
 												<td class="table-light text-center"
-													>{game.get(`${site.name}_visitor_moneyline`)}</td
+													><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_visitor_moneyline`)}</a></td
 												>
 											{/if}
 										{:else}
-											<td class="table-secondary text-center">N/L</td>
+											<td class="table-secondary text-center"><a  class="btn " href={site.link} target="_blank" rel="noreferrer">N/L</a></td>
 										{/if}
 									{/each}
 								</tr>
@@ -182,7 +182,7 @@
 						on:click={changeResponsive}
 						checked
 					/>
-					<label class="form-check-label" for="flexCheckDefault"> Responsive </label>
+					<label class="form-check-label" for="flexCheckDefault"> Toogle View </label>
 				</div>
 			{:else}
 				<div class="form-check">
@@ -193,7 +193,7 @@
 						id="flexCheckDefault"
 						on:click={changeResponsive}
 					/>
-					<label class="form-check-label" for="flexCheckDefault"> Responsive </label>
+					<label class="form-check-label" for="flexCheckDefault"> Toogle View </label>
 				</div>
 			{/if}
 			<div class={responsiveToogle ? 'table-responsive-sm' : ''}>
@@ -219,7 +219,7 @@
                                 }}
                             >
                                 {#each sports as sport}
-                                    <option class="btn-dark" value={sport.link}>{sport.name} </option>
+                                    <option class="btn-dark" value={sport.link}><h5>{sport.name}</h5></option>
                                 {/each}
                             </select></td
 							>
@@ -241,15 +241,15 @@
 									{#if game.has(`${site.name}_home_moneyline`)}
 										{#if game.has(`${site.name}_home_color`)}
 											<td class={`${game.get(`${site.name}_home_color`)} text-center`}
-												>{game.get(`${site.name}_home_moneyline`)}</td
+												><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_home_moneyline`)}</a></td
 											>
 										{:else}
 											<td class="table-light text-center"
-												>{game.get(`${site.name}_home_moneyline`)}</td
+												><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_home_moneyline`)}</a></td
 											>
 										{/if}
 									{:else}
-										<td class="table-secondary text-center">N/L</td>
+										<td class="table-secondary text-center"><a  class="btn " href={site.link} target="_blank" rel="noreferrer">N/L</a></td>
 									{/if}
 								{/each}
 							</tr>
@@ -261,15 +261,15 @@
 									{#if game.has(`${site.name}_visitor_moneyline`)}
 										{#if game.has(`${site.name}_visitor_color`)}
 											<td class={`${game.get(`${site.name}_visitor_color`)} text-center`}
-												>{game.get(`${site.name}_visitor_moneyline`)}</td
+												><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_visitor_moneyline`)}</a></td
 											>
 										{:else}
 											<td class="table-light text-center"
-												>{game.get(`${site.name}_visitor_moneyline`)}</td
+												><a  class="btn " href={site.link} target="_blank" rel="noreferrer">{game.get(`${site.name}_visitor_moneyline`)}</a></td
 											>
 										{/if}
 									{:else}
-										<td class="table-secondary text-center">N/L</td>
+										<td class="table-secondary text-center"><a  class="btn " href={site.link} target="_blank" rel="noreferrer">N/L</a></td>
 									{/if}
 								{/each}
 							</tr>
